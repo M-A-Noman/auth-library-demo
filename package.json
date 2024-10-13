@@ -3,6 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/auth-library-demo-umd.cjs",
+  "module": "dist/auth-library-demo.js",
+  "exports": {
+    ".": {
+      "import": "./dist/auth-library-demo.js",
+      "require": "./dist/auth-library-demo.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -14,7 +25,8 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "vite-plugin-dts": "^4.2.4"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.9.0",
